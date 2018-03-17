@@ -29,15 +29,15 @@ function listenForClicks() {
 
         }
         else if (e.target.classList.contains('lineant')) {
-            // The styles for hyperlinks is gone
-            // but the user can still click on it (if found)
+            // The anchors are changed to span, you can't do anything about it
+            // except reading the page.
             browser.tabs.query({active: true, currentWindow: true})
                 .then(lineant)
                 .catch(reportError);
         }
         else if (e.target.classList.contains('strict')) {
-            // The anchors are changed to span, you can't do anything about it
-            // except reading the page.
+            // This one is WIP, mostly I'd like to remove videos
+            // from the page.
             browser.tabs.query({active: true, currentWindow: true})
                 .then(strict)
                 .catch(reportError);

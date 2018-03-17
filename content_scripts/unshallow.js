@@ -1,22 +1,20 @@
 //function () {
 
 window.hasRun = true;
-window.strictMode = false;
 
 function runStrictMode() {
-    window.strictMode = true;
+    runLineantMode();
+}
+
+function runLineantMode() {
     let anchors = document.querySelectorAll("a");
     anchors.forEach(anchor =>  {
         let s = document.createElement("span");
         // TODO: Copy classes to this span.
+        // Maybe someone's using styling for that.
         s.innerHTML = anchor.innerHTML;
         anchor.replaceWith(s);
     });
-}
-
-function runLineantMode() {
-    resetPage();
-    
 }
 
 function resetPage() {
